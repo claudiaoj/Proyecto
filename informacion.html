@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logonutri.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:wght@200;400;700&family=Overlock:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Nutricionista</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logonutri.png" class="imagen-logo" id="logo-refresh" alt="">
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">
+                <img src="img/logonutri.png" alt="logo" id="logo-refresh">
+            </div>
+            <ul>
+                <li>
+                    <a href="inicio.html" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="sobremi.html">Sobre mi</a>
+                </li>
+                <li>
+                    <a href="consultanutricional.html">Consulta Nutricional</a>
+                </li>
+                <li>
+                    <a href="informacion.html">Información</a>
+                </li>
+            </ul>
+
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </header>
+
+    <main>
+        <section class="informacion-consulta" id="informacion">
+            <h3 class="centrar-texto">Valores</h3>
+            <div class="informacion__texto">
+                <div>
+                    <p class="precio">El valor de la consulta nutricional online <br> es de <b>$20.000</b> -.</p>
+                </div>
+                <div>
+                    <p class="asesoria">
+                    <ol class="asesoria-lista">
+                    <p class="titulo-asesoria">Si quieres atenderte conmigo:</p>
+                        <li value="1">1.Solicita la ficha nutricional del paciente para que puedas completar todos tus datos.</li>
+                        <li>2.Realiza transferencia bancaria a la cuenta que se adjuntará.</li>
+                        <li>3.Envía la ficha más comprobante al correo electrónico.</li>
+                        <li>4.Seguimiento nutricional durante 1 mes: apoyo, consultas y dudas durante todo el tratamiento.</li>
+                        <li>5.Dentro de 2 a 5 días hábiles, recibirás tu plan de alimentación con todo el material acordado.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-texto">Todos los Derechos Reservados - Claudia Ortiz</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logonutri.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200;400;700&family=Overlock:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <title>Nutricionista</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logonutri.png" class="imagen-logo" id="logo-refresh" alt="logo">
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">
+                <img src="img/logonutri.png" alt="logo" id="logo-refresh">
+            </div>
+            <ul>
+                <li>
+                    <a href="inicio.html" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="sobremi.html">Sobre mi</a>
+                </li>
+                <li>
+                    <a href="consultanutricional.html">Consulta Nutricional</a>
+                </li>
+                <li>
+                    <a href="informacion.html">Información</a>
+                </li>
+            </ul>
+            
+        </nav>
+        <label for="nav_check" class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        </label>
+    </header>
+
+    <main>
+        <section class="inicio-uno" id="inicio">
+            <div class="contenido-inicio" id="contenidoid">
+                <h1>Nutricionista Claudia Ortiz</h1>
+                <p class="subtitulo">"Que el alimento sea tu medicina"</p>
+                
+                <button id="open" class="btn-abrircerrar">Contacto</button>
+                <div id="modal_container" class="modal-container">
+                    <div class="modal" id="infoModal">
+                        <h2>Medios de Contacto</h2>
+                        <p class="info"> Si necesitas información, contáctame por los siguientes medios:</p>
+                        <a href="https://www.instagram.com/claudiipaz/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="56" height="56"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M16.5 7.5l0 .01" />
+                            </svg>
+                        </a>
+                        <a href="https://www.gmail.com/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="56" height="56"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                                <path d="M3 7l9 6l9 -6" />
+                            </svg>
+                        </a>
+                        <p class="info">Instagram: @nutricionistaclau</p>
+                        <p class="info">Correo: nutriclaudiao@gmail.com</p>
+                        <button id="close" class="btn-abrircerrar">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        
+    </main>
+
+    <footer class="footer">
+        <p class="footer-texto">Todos los Derechos Reservados - Claudia Ortiz</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

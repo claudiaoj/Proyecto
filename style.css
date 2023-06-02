@@ -1,0 +1,499 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Overlock", cursive;
+}
+
+body {
+  background-color: #e5d1fa;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-radius: 0 0 20px 20px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 250px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+nav .logo {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a {
+  color: #212526;
+  display: block;
+  margin: 0 5px;
+  font-weight: 600;
+  padding: 8px 18px;
+  transition: 0.2s;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  background-color: #e5d1fa;
+}
+
+nav ul li a.active {
+  background: rgb(137, 143, 156);
+  background: linear-gradient(
+    94deg,
+    rgba(137, 143, 156, 0.7875525210084033) 12%,
+    rgba(36, 15, 64, 0.7231267507002801) 47%
+  );
+  color: #ffffff;
+}
+
+.hamburger {
+  display: none;
+  height: fit-content;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.hamburger:hover {
+  background: #f6f4ff;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 2px;
+  margin: 6px 0;
+  background: #212526;
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  nav {
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 999;
+    width: 280px;
+    height: 100vh;
+    background: #fefefe;
+    transition: 0.2s;
+    box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  #nav_check:checked ~ nav {
+    left: 0;
+  }
+
+  nav .logo {
+    display: block;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+  nav ul li a {
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  nav ul {
+    display: block;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/*PAGINA DE INICIO*/
+
+h1 {
+  font-size: 2.8rem;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.subtitulo {
+  font-size: 1.8rem;
+  color: #f6f4ff;
+  text-align: center;
+}
+
+.inicio-uno {
+  background-image: url(img/frutas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+}
+
+.contenido-inicio {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-desayuno {
+  width: 500px;
+  height: 300px;
+  border-radius: 50px;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .subtitulo {
+    font-size: 1.2rem;
+    color: #f6f4ff;
+    text-align: center;
+  }
+
+  .inicio-uno {
+    height: 400px;
+  }
+}
+
+/*Ventana modal*/
+.btn-abrircerrar {
+  background: rgb(137, 143, 156);
+  background: linear-gradient(
+    94deg,
+    rgba(137, 143, 156, 0.7875525210084033) 12%,
+    rgba(36, 15, 64, 0.7231267507002801) 47%
+  );
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #ffffff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h2 {
+  margin: 0;
+}
+
+.modal p {
+  opacity: 0.7;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .btn-abrircerrar {
+    background: rgb(137, 143, 156);
+    background: linear-gradient(
+      94deg,
+      rgba(137, 143, 156, 0.7875525210084033) 12%,
+      rgba(36, 15, 64, 0.7231267507002801) 47%
+    );
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+  }
+}
+
+/*SECCION SOBRE MI*/
+
+.centrar-texto {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sobre-nosotros {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.sobre-nosotros__texto {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px 20px 20px;
+  margin: 0px;
+  background-color: #f6f4ff;
+  border-radius: 5px;
+}
+
+.sobre-nosotros__texto p {
+  font-size: 1rem;
+}
+
+.sobre-nosotros__texto:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.sobre-nosotros__imagen {
+  width: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.sobre-nosotros__imagen:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.sobre-nosotros__imagen,
+.sobre-nosotros__texto {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 690px) {
+  .sobre-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-nosotros__texto {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 60px 20px;
+    margin: auto;
+    font-size: 1rem;
+  }
+
+  .sobre-nosotros__imagen,
+  .sobre-nosotros__texto {
+    width: 300px;
+  }
+}
+
+/*SECCION CONSULTA NUTRICIONAL*/
+
+.consulta-nutricional {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: space-around;
+  background: rgb(231, 234, 240);
+  background: linear-gradient(
+    94deg,
+    rgba(231, 234, 240, 0.7875525210084033) 0%,
+    rgba(247, 249, 251, 0.7931547619047619) 43%,
+    rgba(227, 228, 230, 0.7231267507002801) 100%
+  );
+  border-radius: 10px;
+  margin: 50px;
+  padding: 40px 30px;
+  /*sombra*/
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 111, 112, 0.54);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 111, 112, 0.54);
+  box-shadow: 0px 5px 15px 0px rgba(112, 111, 112, 0.54);
+}
+
+.flip-container {
+  background-color: transparent;
+  width: 380px;
+  height: 400px;
+  border-radius: 10px;
+  perspective: 1000px;
+}
+
+.card-completa {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-container:hover .card-completa {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.front {
+  background-color: #d4b5cc;
+}
+
+.back {
+  background-color: #fff4d2;
+  color: #212526;
+  transform: rotateY(180deg);
+  font-size: 1.2rem;
+}
+
+.titulo-front,
+.titulo-back {
+  font-size: 1.8rem;
+  color: #212526;
+}
+
+.titulo-back {
+  padding: 30px 0;
+}
+
+.texto-parrafo-cards {
+  padding: 0 10px;
+}
+
+/*SECCION IFORMACIÓN*/
+
+.informacion__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 20px;
+  margin: 10px;
+}
+
+.precio {
+  border: 10px solid #d4b5cc;
+  padding: 20px;
+  font-size: 1.5rem;
+  background-image: radial-gradient(
+    circle 400px at 6.8% 8.3%,
+    rgba(255, 244, 169, 1) 0%,
+    rgba(255, 244, 234, 1) 100.2%
+  );
+  text-align: center;
+}
+
+.titulo-asesoria {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  color: #212526;
+}
+
+.asesoria-lista {
+  border: 10px solid #d4b5cc;
+  padding: 20px;
+  background-image: radial-gradient(
+    circle 400px at 6.8% 8.3%,
+    rgba(255, 244, 169, 1) 0%,
+    rgba(255, 244, 234, 1) 100.2%
+  );
+}
+
+.asesoria-lista p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.asesoria-lista li {
+  font-size: 18px;
+  line-height: 3;
+}
+
+.footer {
+  margin-top: 4rem;
+}
+
+.footer-texto {
+  background-color: #fefefe;
+  padding: 40px 0;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
